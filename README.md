@@ -9,5 +9,32 @@ Generate a random integer between two numbers $[a, b]$ (both inclusive) that has
 
 
 ## How it works
+
 A random variable with a probability density function $p(x) = [\frac{1-w}{2^{1-w} - 0.5^{1-w}}] x ^{-w} \; \forall x \in [0.5, 2], x\neq 1$ is used to generate a number in the range $(0.5, 2)$ which is scaled to integers in $[a, b]$ and returned. This is achieved by hard coding the inverse of its cumulative distribution function. Negative weights are taken as positive and the result is flipped in the end to give consistent behavior. The expected runtime is $O(1)$.
+
+## C implementation
+
+```
+make
+./example 0 100 2.5
+```
+
+This generates random numbers between $0$ and $100$ weighted towards $0$ with a weight of $2.5$.
+
+## Python implementation
+
+```
+python example.py 0 100 2.5
+```
+
+This generates random numbers between $0$ and $100$ weighted towards $0$ with a weight of $2.5$.
+
+## Java implementation
+
+```
+javac wrgen/example.java wrgen/wrgen.java
+java wrgen/example 0 100 2.5
+```
+
+This generates random numbers between $0$ and $100$ weighted towards $0$ with a weight of $2.5$.
 
