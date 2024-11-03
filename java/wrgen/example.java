@@ -17,5 +17,6 @@ public class example {
             int r = wrgen.weighted_random(a, b, w);
             System.out.print(r + ", ");
         }
+        System.out.println("");
     }
 }

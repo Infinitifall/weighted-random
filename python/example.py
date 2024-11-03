@@ -5,12 +5,12 @@ def example_simple():
     if len(sys.argv) != 4:
         print('Need 3 arguments!')
         return -1
-    
+
     a = int(sys.argv[1])
     b = int(sys.argv[2])
     w = float(sys.argv[3])
-    
-    for i in range(1):
+
+    for i in range(50):
         r = wrgen.weighted_random(a, b, w)
         print(r, end=', ')
     print('')
